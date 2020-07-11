@@ -7,6 +7,9 @@ function shuffleArr(array) {
 
 function shuffleMiddle(str) {
     let curWord = str.match(/\w*/)[0];
+    if (curWord.length < 4){
+        return str;
+    }
     const firstLetter = curWord.slice(0, 1)
     const lastLetter = curWord.slice(-1)
     let middle = curWord.slice(1, -1).split("")
